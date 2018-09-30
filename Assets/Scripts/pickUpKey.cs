@@ -20,7 +20,7 @@ public class pickUpKey : MonoBehaviour
 
     }
 
-    private void OnTriggerStay()
+    private void OnTriggerEnter()
     {
         keyManager.keys -= 1;
         Destroy(this.gameObject);
