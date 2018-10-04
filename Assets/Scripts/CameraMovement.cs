@@ -5,9 +5,9 @@ public class CameraMovement : MonoBehaviour
 {
 
 
-    public float moveSpd = 150.0f; //WASD movement speed
-    public float sensitivity = 0.1f; //Mouse angle sensitivity
-    public float offscreenMovementBleedSpeed = 15.0f;
+    public float moveSpd = 50.0f; //WASD movement speed
+    public float sensitivity = 0.07f; //Mouse angle sensitivity
+    public float offscreenMovementBleedSpeed = 20.0f;
     private Vector3 prevPosition;
     private Rigidbody rb;
     void Start()
