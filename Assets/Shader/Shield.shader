@@ -8,7 +8,6 @@ Shader "Unlit/Shield"
 		_Fresnel("Fresnel Intensity", Range(0,200)) = 20
 		_FresnelWidth("Fresnel Width", Range(0,2)) = 0.8
 		_Distort("Distort", Range(0, 100)) = 10
-		_IntersectionThreshold("Highlight of intersection threshold", range(0,1)) = 0.2 //Max difference for intersections
 
 	}
 	SubShader
@@ -43,8 +42,9 @@ Shader "Unlit/Shield"
 			};
 
 			sampler2D _MainTex, _CameraDepthTexture, _GrabTexture;
+
 			float4 _MainTex_ST,_MainColor,_GrabTexture_ST, _GrabTexture_TexelSize;
-			float _Fresnel, _FresnelWidth, _Distort, _IntersectionThreshold, _ScrollSpeedU, _ScrollSpeedV;
+			float _Fresnel, _FresnelWidth, _Distort, _ScrollSpeedU, _ScrollSpeedV;
 
 			v2f vert (appdata v)
 			{
@@ -68,8 +68,6 @@ Shader "Unlit/Shield"
 			
 			float4 frag (v2f i,fixed face : VFACE) : SV_Target
 			{
-				//intersection
-				float intersect = saturate((abs(LinearEyeDepth(tex2Dproj(_CameraDepthTexture,i.screenPos).r) - i.screenPos.z)) / _IntersectionThreshold);
 
 				float3 main = tex2D(_MainTex, i.uv);
 
@@ -79,14 +77,16 @@ Shader "Unlit/Shield"
 				distortColor *= _MainColor * _MainColor.a + 1;
 				
 				//intersect hightlight
-				i.rimColor *= intersect * clamp(0,1,face);
+				i.rimColor *= face;
 				main *= _MainColor * pow(_Fresnel,i.rimColor) ;
 				
 				//lerp distort color & fresnel color
 				main = lerp(distortColor, main, i.rimColor.r);
-				main += (1 - intersect) * (face > 0 ? .03:.3) * _MainColor * _Fresnel;
+				
+
+	
 		
-				return float4(main,0.9);
+				return float4(main,1);
 			}
 			ENDCG
 		}

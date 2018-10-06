@@ -1,5 +1,6 @@
-﻿Shader "TriplanarTutorial/Triplanar_Final"
-{
+﻿Shader "textureMapping/Triplanar"
+{	
+	// https://medium.com/@bgolus/normal-mapping-for-a-triplanar-shader-10bf39dca05a
 	Properties
 	{
 		_DiffuseMap("Diffuse Map ", 2D) = "white" {}
@@ -31,6 +32,7 @@
 				half2 yUV = IN.worldPos.xz / _TextureScale;
 				half2 xUV = IN.worldPos.zy / _TextureScale;
 				half2 zUV = IN.worldPos.xy / _TextureScale;
+
 				// Now do texture samples from our diffuse map with each of the 3 UV set's we've just made.
 				half3 yDiff = tex2D(_DiffuseMap, yUV);
 				half3 xDiff = tex2D(_DiffuseMap, xUV);
