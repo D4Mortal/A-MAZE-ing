@@ -6,27 +6,31 @@
 		_DiffuseMap("Diffuse Map ", 2D) = "white" {}
 		_TextureScale("Texture Scale",float) = 1
 		_TriplanarBlendSharpness("Blend Sharpness",float) = 1
+
+		_Metallic("Metallic", Range(0,1)) = 0.0
+		_Smoothness("BlendSmoothness", Range(0,1)) = 0.0
+		_Occlusion("Occlusion", Range(0,4)) = 0.0
 	}
 		SubShader
 		{
-			Tags { "RenderType" = "Opaque" }
+			Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 			LOD 200
 
 			CGPROGRAM
 			#pragma target 3.0
-			#pragma surface surf Lambert
+			#pragma surface surf Standard
 
 			sampler2D _DiffuseMap;
 			float _TextureScale;
 			float _TriplanarBlendSharpness;
-
+			float _Metallic, _Smoothness, _Occlusion;
 			struct Input
 			{
 				float3 worldPos;
 				float3 worldNormal;
 			};
 
-			void surf(Input IN, inout SurfaceOutput o)
+			void surf(Input IN, inout SurfaceOutputStandard o)
 			{
 				// Find our UVs for each axis based on world position of the fragment.
 				half2 yUV = IN.worldPos.xz / _TextureScale;
@@ -45,6 +49,10 @@
 				blendWeights = blendWeights / (blendWeights.x + blendWeights.y + blendWeights.z);
 				// Finally, blend together all three samples based on the blend mask.
 				o.Albedo = xDiff * blendWeights.x + yDiff * blendWeights.y + zDiff * blendWeights.z;
+
+				o.Metallic = _Metallic;
+				o.Smoothness = _Smoothness;
+				o.Occlusion = _Occlusion;
 			}
 			ENDCG
 		}
