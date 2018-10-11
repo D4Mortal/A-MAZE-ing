@@ -8,7 +8,7 @@ public class HealthManager : MonoBehaviour {
 
     public int startingHealth = 100;
     public Slider healthSlider;
-    //public Image damageImage;
+    public Image damageImage;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
@@ -31,11 +31,11 @@ public class HealthManager : MonoBehaviour {
     {
         if (isDamaged)
         {
-            //damageImage.color = flashColour;
+            damageImage.color = flashColour;
         }
         else
         {
-            //damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         isDamaged = false;
     }

@@ -29,7 +29,7 @@ public class TowerController : MonoBehaviour
     {
         HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
         var distance = Vector3.Distance(this.transform.position, this.player.transform.position);
-        if (distance < 45f)
+        if (distance < 30f)
         {
             // Fires a projectile every 3 seconds
             if (Time.time > nextFire)
