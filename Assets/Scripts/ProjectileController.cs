@@ -5,17 +5,26 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour {
 
     public Vector3 velocity;
-    
+
     public int damageAmount = 10;
     public string tagToDamage;
-    public float lifeDuration = 3f;
-	// Use this for initialization
-	void Start () {
-        Destroy(gameObject, lifeDuration);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public string shieldColour;
+    GameObject player;
+    HealthManager playerHealth;
+
+    // Use this for initialization
+    void Start()
+    {
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<HealthManager>();
+        Destroy(gameObject, 3f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         this.transform.Translate(velocity * Time.deltaTime);
     }
 
@@ -28,11 +37,15 @@ public class ProjectileController : MonoBehaviour {
 
         //    Destroy(this.gameObject);
         //}
-        if(col.gameObject.tag == "Player" || col.gameObject.tag == "Environment" )
+        if (col.gameObject.tag == "Player")
         {
+            playerHealth.ApplyDamage(damageAmount);
             Debug.Log("hello");
             Destroy(this.gameObject);
         }
-        
+        if (col.gameObject.tag == "Environment" || col.gameObject.name == shieldColour)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
