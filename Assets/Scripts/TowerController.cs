@@ -9,6 +9,7 @@ public class TowerController : MonoBehaviour
     public PlayerController player;
     public float velocity = 10;
     public GameObject spawnPoint;
+    public float targetRadius = 10f;
     float fireRate;
     float nextFire;
 
@@ -29,7 +30,7 @@ public class TowerController : MonoBehaviour
     {
         HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
         var distance = Vector3.Distance(this.transform.position, this.player.transform.position);
-        if (distance < 30f)
+        if (distance < targetRadius)
         {
             // Fires a projectile every 3 seconds
             if (Time.time > nextFire)

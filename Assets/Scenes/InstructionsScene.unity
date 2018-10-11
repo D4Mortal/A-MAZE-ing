@@ -473,6 +473,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114739071954580688, guid: 651c3f15862986940a835b5e54ab841d,
+        type: 2}
+      propertyPath: m_Text
+      value: "W - Forward \nA - Left \nS - Backward \nD - Right\nSpace - Jump \nLShift
+        - Sprint\nC - Blue Shield \nV - Red Shield\nCollect all the keys and escape!!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 651c3f15862986940a835b5e54ab841d, type: 2}
   m_IsPrefabParent: 0

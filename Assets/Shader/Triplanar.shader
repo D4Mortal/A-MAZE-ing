@@ -18,7 +18,7 @@
 
 			CGPROGRAM
 			#pragma target 3.0
-			#pragma surface surf Standard
+			#pragma surface surf Standard fullforwardshadows
 
 			sampler2D _DiffuseMap;
 			float _TextureScale;

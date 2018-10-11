@@ -16,10 +16,8 @@ public class openDoor : MonoBehaviour {
         
         if (inRange)
         {
-            if (Input.GetKey(KeyCode.E))
-            {
-                hinge.Play();
-            }
+            hinge.Play();
+
             
         }
 
