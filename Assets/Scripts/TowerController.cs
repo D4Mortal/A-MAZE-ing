@@ -18,7 +18,7 @@ public class TowerController : MonoBehaviour
         if (this.player == null)
         {
             this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-            this.spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
+            
         }
         fireRate = 1f;
         nextFire = Time.time;
