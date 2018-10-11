@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: cdc08366d74a24f80bacc662e03fb7aa
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: b828a92719f164219b61dae6a9527adc
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScene.unity
+    guid: c4e854dc978c8409d97d4b01beb35f3b
+  - enabled: 1
+    path: Assets/Scenes/15_15Maze.unity
+    guid: 7a24618f485b43f429f1c812cfb7b8c6
   m_configObjects: {}
