@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour {
 
@@ -54,7 +55,7 @@ public class HealthManager : MonoBehaviour {
         healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
-            this.zeroHealthEvent.Invoke();
+            SceneManager.LoadScene("GameLost");
         }
     }
 
