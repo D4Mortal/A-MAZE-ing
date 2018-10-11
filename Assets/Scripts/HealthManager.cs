@@ -20,7 +20,7 @@ public class HealthManager : MonoBehaviour {
     // for writing extensible code.
     public UnityEvent zeroHealthEvent;
 
-    private int currentHealth;
+    public int currentHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -55,7 +55,8 @@ public class HealthManager : MonoBehaviour {
         healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene("GameLost");
+            Debug.Log("hello");
+            SceneManager.LoadScene("End");
         }
     }
 
