@@ -20,11 +20,13 @@ public class pickUpKey : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider col)
     {
-        keyManager.keys -= 1;
-        Destroy(this.gameObject);
-        
+        if (col.gameObject.tag == "Player")
+        {
+            keyManager.keys -= 1;
+            Destroy(this.gameObject);
+        }
 
         
     }

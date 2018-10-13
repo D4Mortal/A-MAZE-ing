@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/transitions/MainMenu.unity
     guid: cdc08366d74a24f80bacc662e03fb7aa
   - enabled: 1
@@ -24,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/transitions/GameWon.unity
     guid: cc590b3464f874a079ce01c4ce1a8357
   - enabled: 1
-    path: Assets/Scenes/End.unity
+    path: Assets/Scenes/transitions/End.unity
     guid: 2563e1958db245048b6ca047ea634207
+  - enabled: 1
+    path: Assets/Scenes/transitions/Won.unity
+    guid: 6f4e53aca45c1af48819b5c3476867fd
   m_configObjects: {}

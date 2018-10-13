@@ -55,7 +55,7 @@ public class HealthManager : MonoBehaviour {
         healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
-            Debug.Log("hello");
+            
             SceneManager.LoadScene("End");
         }
     }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class createShield : MonoBehaviour {
 
-    public float shieldDuration = 0.5f;
-    public float coolDownDuration = 1.5f;
+    public float shieldDuration = 0.3f;
+    public float coolDownDuration = 0.5f;
     public KeyCode keyCode;
     
     private float coolDownTimer;

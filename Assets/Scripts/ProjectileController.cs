@@ -40,7 +40,7 @@ public class ProjectileController : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             playerHealth.ApplyDamage(damageAmount);
-            Debug.Log("hello");
+            
             Destroy(this.gameObject);
         }
         if (col.gameObject.tag == "Environment" || col.gameObject.name == shieldColour)

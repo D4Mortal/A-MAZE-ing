@@ -771,9 +771,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 114647760741496736, guid: 5b9865c6a222f23429333c387181ddfc,
     type: 2}
   player: {fileID: 0}
-  velocity: 5
+  velocity: 10
   spawnPoint: {fileID: 1011105740065642}
-  targetRadius: 10
+  targetRadius: 20
 --- !u!114 &114979022243529578
 MonoBehaviour:
   m_ObjectHideFlags: 1
