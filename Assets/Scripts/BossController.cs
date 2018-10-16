@@ -24,6 +24,8 @@ public class BossController : MonoBehaviour
     private float beat = 0.662f;
 
     public AudioSource bossMusic;
+    public AudioSource inGameMusic;
+
     void Start()
     {
        
@@ -50,7 +52,9 @@ public class BossController : MonoBehaviour
         red.coolDownDuration = 0.13f;
 
         player.GetComponent<FirstPersonController>().enabled = false;
+
         bossMusic.Play();
+        inGameMusic.Stop();
     }
 
     // Update is called once per frame
@@ -63,28 +67,37 @@ public class BossController : MonoBehaviour
             // Fires a projectile every 3 seconds
             if (Time.time > nextFire)
             {
-                ProjectileController p;
-
-
-                if (Random.Range(-1,1) < 0)
+                if (counter == 66)
                 {
-                    p = Instantiate<ProjectileController>(projectilePrefabFire);
+                    SceneManager.LoadScene("Won");
                 }
-                else
-                {
-                    p = Instantiate<ProjectileController>(projectilePrefabIce);
-                }
-                Vector3 bulletSpawn = spawnPoint.transform.position;
-                p.transform.position = bulletSpawn;
-                p.velocity = (this.player.transform.position - bulletSpawn).normalized * velocity;
+
+                shoot();
+
                 nextFire = Time.time + beat;
                 counter++;
             }
         }
 
-        if (counter == 66)
+        
+    }
+
+    private void shoot()
+    {
+        if (counter < 64)
         {
-            SceneManager.LoadScene("Won");
-        }
+            ProjectileController p;
+            if (Random.Range(-1, 1) < 0)
+            {
+                p = Instantiate<ProjectileController>(projectilePrefabFire);
+            }
+            else
+            {
+                p = Instantiate<ProjectileController>(projectilePrefabIce);
+            }
+            Vector3 bulletSpawn = spawnPoint.transform.position;
+            p.transform.position = bulletSpawn;
+            p.velocity = (this.player.transform.position - bulletSpawn).normalized * velocity;
+        }  
     }
 }

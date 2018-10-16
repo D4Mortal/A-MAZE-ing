@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnPoint
   - Environment
+  - Music
   layers:
   - Default
   - TransparentFX

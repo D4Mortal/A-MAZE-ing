@@ -497,6 +497,12 @@ Prefab:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114739071954580688, guid: 651c3f15862986940a835b5e54ab841d,
+        type: 2}
+      propertyPath: m_Text
+      value: "W - Forward \nA - Left \nS - Backward \nD - Right\nSpace - Jump \nLShift
+        - Sprint\nC - Blue Shield \nV - Red Shield\nCollect All the keys to escape!!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 651c3f15862986940a835b5e54ab841d, type: 2}
   m_IsPrefabParent: 0
