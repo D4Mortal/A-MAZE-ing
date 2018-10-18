@@ -11,7 +11,7 @@ public class HealthManager : MonoBehaviour {
     public Image damageImage;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-
+    public int maxHealth = 100;
 
     bool isDead;
     bool isDamaged;
@@ -55,13 +55,21 @@ public class HealthManager : MonoBehaviour {
         healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
-            
             SceneManager.LoadScene("End");
         }
     }
 
-    // Get the current health of the object
-    public int GetHealth()
+
+    public void ApplyHeal(int heal)
+    {
+
+        currentHealth += heal;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        healthSlider.value = currentHealth;
+
+    }
+        // Get the current health of the object
+        public int GetHealth()
     {
         return this.currentHealth;
     }
