@@ -2538,6 +2538,16 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114650627083140956, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: keyCode
+      value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 114409588886443094, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: keyCode
+      value: 323
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114529837101244788, guid: 0c4210b6c27444472879899f91380f0f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c4210b6c27444472879899f91380f0f, type: 2}

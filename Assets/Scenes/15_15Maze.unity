@@ -6089,12 +6089,12 @@ Prefab:
     - target: {fileID: 114769365328641032, guid: f0f349c52ff3c4387998091b7734d8a0,
         type: 2}
       propertyPath: keyCode
-      value: 99
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 114698413991049492, guid: f0f349c52ff3c4387998091b7734d8a0,
         type: 2}
       propertyPath: keyCode
-      value: 118
+      value: 324
       objectReference: {fileID: 0}
     - target: {fileID: 23339678810966440, guid: f0f349c52ff3c4387998091b7734d8a0,
         type: 2}
