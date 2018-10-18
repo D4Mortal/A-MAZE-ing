@@ -26,6 +26,7 @@ public class BossController : MonoBehaviour
     public AudioSource bossMusic;
     public AudioSource inGameMusic;
 
+
     void Start()
     {
        
@@ -43,7 +44,7 @@ public class BossController : MonoBehaviour
                                 beat, beat, beat, beat, beat, beat, beat, beat, beat, beat, 0.1f, beat - 0.1f,
                                 beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat};
         counter = 0;
-        nextFire = Time.time + beat;
+        nextFire = Time.time + beat * 3;
 
         blue.shieldDuration = 0.1f;
         blue.coolDownDuration = 0.13f;
@@ -66,7 +67,7 @@ public class BossController : MonoBehaviour
         {  
             // Fires a projectile every 3 seconds
             if (Time.time > nextFire)
-            {
+            {   
                 if (counter == 66)
                 {
                     SceneManager.LoadScene("Won");
