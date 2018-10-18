@@ -42,6 +42,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private bool isSlowed;
+        public float slowTime = 1;
+        private float regainSpeedTime;
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +58,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            isSlowed = false;
         }
 
 
@@ -81,6 +85,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (isSlowed)
+            {
+                if (Time.time > regainSpeedTime)
+                {
+                    revertSlow();
+                    isSlowed = false;
+                }
+            }
         }
 
 
@@ -254,6 +267,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        public void applySlow()
+        {
+            m_WalkSpeed = 1;
+            m_RunSpeed = 2;
+            regainSpeedTime = Time.time + slowTime;
+            isSlowed = true;
+        }
+        public void revertSlow()
+        {
+            m_WalkSpeed = 2;
+            m_RunSpeed = 4;
         }
     }
 }

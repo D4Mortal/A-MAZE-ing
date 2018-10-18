@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class ProjectileController : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class ProjectileController : MonoBehaviour {
     public string shieldColour;
     GameObject player;
     HealthManager playerHealth;
+    
 
     // Use this for initialization
     void Start()
@@ -24,7 +26,7 @@ public class ProjectileController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        
         this.transform.Translate(velocity * Time.deltaTime);
     }
 
@@ -38,9 +40,13 @@ public class ProjectileController : MonoBehaviour {
         //    Destroy(this.gameObject);
         //}
         if (col.gameObject.tag == "Player")
-        {
+        {   
             playerHealth.ApplyDamage(damageAmount);
             
+            if (this.tag == "IceDmg")
+            {
+                player.GetComponent<FirstPersonController>().applySlow();
+            }
             Destroy(this.gameObject);
         }
         if (col.gameObject.tag == "Environment" || col.gameObject.name == shieldColour)
