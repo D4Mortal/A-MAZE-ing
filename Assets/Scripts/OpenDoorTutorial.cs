@@ -21,6 +21,8 @@ public class OpenDoorTutorial : MonoBehaviour {
         Debug.Log("Collided");
         if (col.gameObject.name == "Player")
         {
+            Debug.Log("with Player");
+
             hingeAnimator.SetBool("unlocked",true);
         }
             
