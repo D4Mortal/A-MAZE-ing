@@ -17,9 +17,9 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    public void OptionsClick()
+    public void TutorialClick()
     {
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("Tutorial");
     }
 
 
