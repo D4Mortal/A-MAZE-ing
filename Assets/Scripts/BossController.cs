@@ -17,7 +17,6 @@ public class BossController : MonoBehaviour
     public float velocity = 10;
     public GameObject spawnPoint;
     public float targetRadius = 10f;
-    public float fireRate;
     private float[] rhythm;
     private int counter;
     float nextFire;
@@ -38,19 +37,16 @@ public class BossController : MonoBehaviour
         player.transform.position = new Vector3(-2.62f, 0.5f, -5.33f);
         player.transform.localEulerAngles = new Vector3(0, -45, 0);
 
-        fireRate = 1f;
         nextFire = Time.time;
-        rhythm = new float[] { beat, beat, beat, beat, beat, beat, beat, beat, beat,
-                                beat, beat, beat, beat, beat, beat, beat, beat, beat, beat, 0.1f, beat - 0.1f,
-                                beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat,beat};
+
         counter = 0;
         nextFire = Time.time + beat * 3;
 
         blue.shieldDuration = 0.1f;
-        blue.coolDownDuration = 0.13f;
+        blue.coolDownDuration = 0.4f;
 
         red.shieldDuration = 0.1f;
-        red.coolDownDuration = 0.13f;
+        red.coolDownDuration = 0.4f;
 
         player.GetComponent<FirstPersonController>().enabled = false;
 

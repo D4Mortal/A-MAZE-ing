@@ -930,8 +930,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 7.1483426, z: 12}
-  m_Center: {x: -0.5484326, y: -1.7609136, z: 5.969966}
+  m_Size: {x: 1.9346621, y: 7.1483426, z: 12}
+  m_Center: {x: -0.5811019, y: -1.7609134, z: 5.969967}
 --- !u!4 &389243210
 Transform:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ Prefab:
     - target: {fileID: 114333810670734246, guid: 22eae74f1161da34b98a9476c22e8d2a,
         type: 2}
       propertyPath: targetRadius
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22eae74f1161da34b98a9476c22e8d2a, type: 2}
@@ -1466,7 +1466,7 @@ Prefab:
     - target: {fileID: 114753476113066932, guid: 9f704b16204c2a846bb700033a5c2110,
         type: 2}
       propertyPath: targetRadius
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4726623685520882, guid: 9f704b16204c2a846bb700033a5c2110, type: 2}
       propertyPath: m_LocalScale.x
@@ -3003,6 +3003,16 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114409588886443094, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: keyCode2
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 114650627083140956, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: keyCode2
+      value: 118
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114529837101244788, guid: 0c4210b6c27444472879899f91380f0f, type: 2}

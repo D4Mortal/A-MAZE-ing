@@ -7,7 +7,7 @@ public class createShield : MonoBehaviour {
     public float shieldDuration = 0.3f;
     public float coolDownDuration = 0.5f;
     public KeyCode keyCode;
-    
+    public KeyCode keyCode2;
     private float coolDownTimer;
     private float shieldActiveTimer;
 
@@ -26,7 +26,7 @@ public class createShield : MonoBehaviour {
 	void Update () {
 
         // activate the shield if the key is pressed, and begin counting how long is shield is active for as well as it's cooldown
-        if (Input.GetKeyDown(keyCode) && !onCoolDown)
+        if ((Input.GetKeyDown(keyCode)  || Input.GetKeyDown(keyCode2)) && !onCoolDown)
         {
             GetComponent<Renderer>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
