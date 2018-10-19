@@ -249,6 +249,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
+            Debug.Log("mouse coords reveived: " + transform.eulerAngles.x.ToString() + "," +  transform.eulerAngles.y.ToString() + "," + transform.eulerAngles.z.ToString());
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
