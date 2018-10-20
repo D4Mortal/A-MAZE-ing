@@ -77,7 +77,7 @@
                 float3 ambient = output.col * _AmbientRefl;
 
                 float LdotN = dot(lightDir, normalDirection);
-                float3 diffuse =  _DiffuseRefl * output.col.xyz * saturate(LdotN);
+                float3 diffuse =  attenuation * _DiffuseRefl * output.col * saturate(LdotN);
 
                 float Ks = 1;
                 float3 H = normalize(viewDirection + lightDir);

@@ -21052,44 +21052,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalPosition.x
       value: 30.228
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2.952
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalPosition.z
       value: -19.517
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+    - target: {fileID: 4896859419206698, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4017368938426202, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+    - target: {fileID: 1758483432462494, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
+      propertyPath: m_Name
+      value: HealthPool
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1e92c2ccaf3cb40be89b94722012094a, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: cfb72a340cd5045ba85e6acb88c23246, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2084970263
 GameObject:
