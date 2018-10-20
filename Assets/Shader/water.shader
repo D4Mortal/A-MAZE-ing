@@ -2,6 +2,7 @@
 {
     Properties
     {
+       _Colour ("Colour", Color) = (0, 0, 1, 1)
        _Transparency("Transparency", Range(0.0,1.0)) = 0.5
        _Shininess ("Shininess", Float) = 25
        _SpecularColour ("Specular Colour", Color) = (1, 1, 1, 1) 
@@ -50,6 +51,7 @@
             float4 _SpecularColour;
             float _WaveAmp;
             float _WaveFrequency;
+            float4 _Colour;
 
             vertexOutput vert(vertexInput input) {
                 input.vertex += _WaveAmp * float4(0.0, sin(_WaveFrequency * (_Time.y + input.vertex.x)), 0.0, 0.0);
@@ -60,7 +62,7 @@
 
                 output.normal = normalize(mul(input.normal, unity_WorldToObject).xyz);
                 output.position = UnityObjectToClipPos(input.vertex);
-                output.col = float4(0.0, 0.0, 0.9, input.vertex.y*10);
+                output.col = _Colour;
                 return output;
             }
 
