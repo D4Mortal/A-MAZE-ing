@@ -1,0 +1,11 @@
+Group Members:
+Daniel Hao, username: dhao1, email: dhao1@student.unimelb.edu.au, student ID: 834496
+Ryan Cheng, username: chengr2, email:chengr2@student.unimelb.edu.au, student ID: 833799 
+Raymond Sun, username:raymonds1, email:raymonds1@student.unimelb.edu.au, student ID: 831681
+
+Contributions:
+Daniel: Created the maze layout and design. Created keys to pick up and unlock the door to exit the maze. Created the final boss battle upon exiting the maze. Designed the boss fight battle, such as disabling player movement and reducing shield duration upon entering boss fight and designing boss attack patterns. Implemented slow effect on player movement when hit by certain projectiles. Added music effects to the game, main menu and win scene. Created shield and its visual effects as well as corresponding collision detection for different projectiles with different shields. Created the fire particle effect used on towers and projectiles. Added phong shader to towers. 
+
+Ryan: Dealt with and created the 2 minute video submission demonstrating the gameplay. Dealt with the creation and behaviour of towers; imported asset, initial colours, placement on map, appropriate hitboxes/colliders and spawn point of projection. Created the fireball projectiles from towers and its behaviour; visual effects, interaction with the player, appropriate projectile velocity, fire rate, target radius and fair damage to player. Dealt with player health; dies when health == 0, player hitbox, Health icon, health bar and screen flashing on it for the UI. Created the appropriate scene transitions on death and on win. Created the health pack object. Added music source to game.
+
+Raymond: Made the main menu and transition to and from. Made the end game trigger and script. Designed the tutorial; wall placement, tower placement, created the secret door animation. Made the health pool, the water shader, the health pool script.

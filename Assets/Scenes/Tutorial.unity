@@ -3028,7 +3028,7 @@ Prefab:
     - target: {fileID: 114821899077638580, guid: 0c4210b6c27444472879899f91380f0f,
         type: 2}
       propertyPath: startingHealth
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1675666993917732, guid: 0c4210b6c27444472879899f91380f0f, type: 2}
       propertyPath: m_Name
@@ -3063,6 +3063,16 @@ Prefab:
         type: 2}
       propertyPath: keyCode2
       value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114126879666372410, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: m_StickToGroundForce
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 114126879666372410, guid: 0c4210b6c27444472879899f91380f0f,
+        type: 2}
+      propertyPath: m_GravityMultiplier
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114529837101244788, guid: 0c4210b6c27444472879899f91380f0f, type: 2}
